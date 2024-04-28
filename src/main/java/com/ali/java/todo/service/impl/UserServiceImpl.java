@@ -10,7 +10,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
+
 import java.util.stream.Collectors;
 
 
@@ -55,8 +55,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDto findById(Long id) {
-
-        Optional<User> user = userRepository.findById(id);
 
         return toUserDto(userRepository.findById(id).orElse(null)) ;
     }
