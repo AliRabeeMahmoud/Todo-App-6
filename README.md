@@ -6,4 +6,5 @@ This project is developed with Java and Spring boot
 ### with Swagger UI 
 ### with DTO using ModelMapper 
 ### with validation and custom validation
+### with @Schema for swagger docs customization
 
