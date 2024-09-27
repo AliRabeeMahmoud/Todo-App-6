@@ -1,26 +1,24 @@
+version: "3.8"
+
 services:
   mysql:
     container_name: mysql
     image: mysql
     environment:
-      MYSQL_ROOT_PASSWORD: ali45
+      MYSQL_ROOT_PASSWORD: ali45     # POSTGRES_USER=$POSTGRESDB_USER
+                                      # POSTGRES_PASSWORD=$POSTGRESDB_ROOT_PASSWORD
+                                      #  POSTGRES_DB=$POSTGRESDB_DATABASE
     ports:
       - "3303:3306"
     volumes:
       - mysql:/var/lib/mysql
-    networks:
-      - springNet
+
   springApp:
     container_name: myApp
     image: spring/demo
     ports:
       - "8081:8081"
-    networks:
-      - springNet
     depends_on:
       - mysql
 volumes:
   mysql:
-networks:
-  springNet:
-    driver: bridge
