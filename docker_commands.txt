@@ -1,0 +1,50 @@
+docker pull postgres:9.5
+
+docker run -e POSTGRES_PASSWORD=1234 postgres
+
+docker images  #show all images
+
+docker ps       #show running containers
+
+docker ps -a        #show all containers
+
+docker start <containerID or name>
+
+docker stop <dockerID or name>
+
+ctrl+C  #exit undetached mode
+
+docker logs containerID or name   #show last logs of container
+
+docker logs -f containerID or name   #show last and present logs
+
+docker exec -it name psql -U postgres       #run container in interactive mode
+
+docker run --name myCont alpine     #give a name to container
+
+docker run -d alpine        #run in detached mode
+
+docker rm ID or name        #remove / delete container
+
+docker rmi ID or name       #remove / delete image
+
+################ Docker Volumes ##################################################
+
+# data is lost when container stops
+
+docker run --name docky -v myVolume /var/lib/alpine alpine      #create a volume without specifying location
+                                                                # on your device
+
+############## Docker Ports ##############################################
+
+docker run --name docky -p 8081:8080 myAppImage
+
+############## Dockerizing Spring Boot App ####################################
+
+1- create Dockerfile
+2- in terminal in intellij: docker build -t myApp
+3- docker images
+4- docker run myApp
+5- change localhost in database properties in the properties file: make it the container name
+6- run ./mvnw clean package
+
