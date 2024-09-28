@@ -36,6 +36,8 @@ git branch      #show all branches (active branch with *)
 
 git switch <branch name>        #switch to another branch
 
+git checkout <branch name>      #both create and switch to branch
+
 git commit -a -m "message"      #commit all changes
 
 git switch main
