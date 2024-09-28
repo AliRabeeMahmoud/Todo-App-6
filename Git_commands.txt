@@ -40,8 +40,11 @@ git checkout <branch name>      #both create and switch to branch
 
 git commit -a -m "message"      #commit all changes
 
+git push origin <branch name>     #push the new branch to GitHub
+
 git switch main
 git merge -m "message" <branch name>        #merge branch to main(current branch)
+
 
 git branch -d <branch name>         #delete branch
 
