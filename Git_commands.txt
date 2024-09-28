@@ -1,0 +1,58 @@
+git config --global .....       #connect to online repo
+
+cd "C:\bla\bla"     #change directory to your project
+
+git init        #create git repository
+
+git status      #show your current branch, previous commits, untracked files, changes made
+
+git add <file name>     #track changes for this file
+
+git rm --cached <file name>     # stop tracking this file
+
+create .gitignore file , open it with note pad, and write the following in it:
+        # ignore all .txt files
+        *.txt           #don't track these files at all
+
+git add .       #track all files in project
+
+git commit -m "message"
+
+git diff        #show differences / changes in code
+
+git restore --staged <file name>        #restore a deleted file
+
+git log  [--oneline]        #SHOW all commits
+
+git commit -m "message" --amend     #change commit message
+
+git reset <commit ID>       #reset to previous commit
+
+################ Git Branching ###############################################
+
+git branch <name>       #create a new branch
+
+git branch      #show all branches (active branch with *)
+
+git switch <branch name>        #switch to another branch
+
+git commit -a -m "message"      #commit all changes
+
+git switch main
+git merge -m "message" <branch name>        #merge branch to main(current branch)
+
+git branch -d <branch name>         #delete branch
+
+################### merge conflicts ################################################
+
+just delete either Head or newBranch code then:
+git commit -a -m "message"
+
+####################### GitHub ####################################################
+
+git pull        #pull project changes from GitHub to your device
+
+
+
+
+
